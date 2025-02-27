@@ -15,7 +15,7 @@ const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.da
 const mainNews = sortedNews[0];
 const sideNews = sortedNews.slice(1, 5);
 
-// Ambil list berita terbaru
+// Ambil list berita terbaru 
 
 
 const LatestNewsLeft = () => {
