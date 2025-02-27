@@ -1,6 +1,6 @@
 import React from "react";
 import Headline from "@/components/page-components/headline/Headline";
-import LatestNewsLeft from "@/components/page-components/latestNewsLeft/LatestNewsLeft";
+import LatestNewsLeft from "../components/page-components/latestnewsLeft/LatestNewsLeft";
 import SideContent1 from "@/components/page-components/sideContent1/SideContent1"
 import PopularNews from "@/components/page-components/popularNews/PopularNews"
 import Ads from "@/components/page-components/adv-sect/AdvBottomHead"
