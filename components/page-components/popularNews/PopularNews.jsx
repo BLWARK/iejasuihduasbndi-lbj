@@ -32,9 +32,9 @@ const PopularNews = () => {
             </div>
             <div className="flex-1">
               <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
-                <h3 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">
+                <h1 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">
                   {news.title}
-                </h3>
+                </h1>
               </Link>
               <div className="flex items-center gap-2 mt-2 text-xs opacity-80">
                 {getAuthorById(news.authorId)?.photo && (

@@ -51,10 +51,10 @@ const Corner = () => {
           </div>
           {/* Tombol navigasi hanya tampil di desktop */}
           <div className="hidden md:flex items-center gap-2">
-            <button onClick={prevSlide} className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+            <button onClick={prevSlide} aria-label="arrowleft" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
               <FaArrowLeft />
             </button>
-            <button onClick={nextSlide} className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+            <button onClick={nextSlide} aria-label="arrowright" className="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
               <FaArrowRight />
             </button>
           </div>

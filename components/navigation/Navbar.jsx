@@ -216,7 +216,7 @@ const Navbar = () => {
               className="hidden md:block relative w-28 h-10"
             >
               <Image
-                src="/Logo OneZone TV.png"
+                src="/Logo XYZone-Solid.png"
                 alt="XYZONETV"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
