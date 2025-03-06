@@ -44,7 +44,7 @@ const LatestNewsLeft = () => {
             <Image src={mainNews.image} alt={mainNews.title} fill className="w-full h-full object-cover rounded-lg" />
           </div>
           <div className="text-black">
-            <Link href={`/artikel/${mainNews.id}/${mainNews.slug}`} passHref>
+            <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <h2 className="text-xl font-bold leading-tight hover:underline cursor-pointer">
                 {mainNews.title}
               </h2>
@@ -69,7 +69,7 @@ const LatestNewsLeft = () => {
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
               <div className="flex-1">
-                <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+                <Link href={`/post/${news.id}/${news.slug}`} passHref>
                   <h3 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">
                     {news.title}
                   </h3>

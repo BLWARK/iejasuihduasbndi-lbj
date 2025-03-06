@@ -17,6 +17,7 @@ const MainHeadline = ({ mainNews }) => {
             <Image
               src={mainNews.image}
               alt={mainNews.title}
+              sizes="100vw"
               fill
               className="rounded-lg object-cover"
               priority={true}

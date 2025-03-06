@@ -9,7 +9,7 @@ const getAuthorById = (authorId) =>
   usersData.find((user) => user.id === authorId) || {};
 
 // Urutkan berita berdasarkan views terbanyak
-const popularNews = [...newsData].sort((a, b) => b.views - a.views).slice(0, 10);
+const popularNews = [...newsData].sort((a, b) => b.views - a.views).slice(0, 12);
 
 const PopularNews = () => {
   return (
@@ -31,7 +31,7 @@ const PopularNews = () => {
               <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
             </div>
             <div className="flex-1">
-              <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
                 <h1 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">
                   {news.title}
                 </h1>

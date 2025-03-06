@@ -15,7 +15,7 @@ const Headline = () => {
 
   return (
     <div className="w-full 2xl:max-w-[1200px] xl:max-w-[1200px] lg:max-w-[1020px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 py-4 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 py-2 gap-2">
         <MainHeadline mainNews={headlineNews[0]} />
         <SideHeadline sideNews={headlineNews.slice(1, 3)} />
       </div>

@@ -14,10 +14,11 @@ const editorNews = newsData.filter((news) => news.type === "editor").slice(0, 5)
 
 const SideContent1 = () => {
   return (
-    <div className="flex flex-col gap-4 border-l-2 2xl:pl-4 xl:pl-4 lg:pl-4 pl-0 ">
+    <div className="flex flex-col gap-4 2xl:border-l-2 xl:border-l-2 lg:border-l-2 2xl:pl-4 xl:pl-4 lg:pl-4 pl-0 ">
       <Ads />
-      <h1 className="text-2xl font-bold text-blue-700 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10">Pilihan Editor</h1>
-      <div className="w-[20%] h-[5px]  bg-blue-700"></div>
+      <Ads />
+      <h1 className="text-2xl font-bold text-red-500 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10">Pilihan Editor</h1>
+      <div className="w-[20%] h-[5px]  bg-red-500"></div>
       
       {editorNews.map((news, index) => (
         <div key={news.id} className="flex flex-col">
@@ -27,7 +28,7 @@ const SideContent1 = () => {
           </div>
 
           {/* Judul */}
-          <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+          <Link href={`/post/${news.id}/${news.slug}`} passHref>
             <h3 className="text-sm font-semibold hover:underline mt-3">{news.title}</h3>
           </Link>
 

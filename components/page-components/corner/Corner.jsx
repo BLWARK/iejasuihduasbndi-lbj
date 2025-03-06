@@ -72,7 +72,7 @@ const Corner = () => {
                   <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-black/50"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+                    <Link href={`/post/${news.id}/${news.slug}`} passHref>
                       <h3 className="text-lg font-bold leading-tight hover:underline">{news.title}</h3>
                     </Link>
                   </div>
@@ -90,7 +90,7 @@ const Corner = () => {
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+                  <Link href={`/post/${news.id}/${news.slug}`} passHref>
                     <h3 className="text-lg font-bold leading-tight hover:underline">{news.title}</h3>
                   </Link>
                 </div>

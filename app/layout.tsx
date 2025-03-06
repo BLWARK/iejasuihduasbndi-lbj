@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import TopNavbar from "@/components/navigation/TopNavbar"
 import Navbar from "@/components/navigation/Navbar"
+import Footer from "@/components/footer/Footer"
+import Ecosystem from "@/components/navigation/Ecosystem"
 
 import "./globals.css";
 
@@ -12,9 +14,9 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lensa Berita Jakarta - Portal Berita Terpercaya",
-  description: "Lensa Berita Jakarta adalah portal berita terpercaya yang menyajikan informasi terkini di dunia politik, ekonomi, hiburan, dan gaya hidup.",
-  keywords: "Lensa Berita Jakarta, portal berita, berita terkini, berita politik, berita ekonomi, berita hiburan",
+  title: "Lensa Berita Jakarta - informasi berita terkini",
+  description: "Lensa Berita Jakarta adalah portal berita terpercaya yang menyajikan informasi terkini indonesia dan internasional.",
+  keywords: "Lensa Berita Jakarta, portal berita, berita terkini, berita politik, berita ekonomi, berita hiburan, berita terbaru, politik, kecelakaan, indonesia",
   authors: [{ name: "Lensa Berita Jakarta Team", url: "https://lensaberitajakarta.com" }],
   openGraph: {
     title: "Lensa Berita Jakarta - Portal Berita Terpercaya",
@@ -54,8 +56,10 @@ export default function RootLayout({
       <body className={openSans.className}>
         <div className="flex flex-col justify-center items-center overflow-hidden bg-gray-100 w-full">
           <TopNavbar/>
+          <Ecosystem/>
           <Navbar/>
           <main className="w-full 2xl:px-0">{children}</main>
+          <Footer/>
         </div>
       </body>
     </html>

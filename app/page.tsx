@@ -3,10 +3,11 @@ import Headline from "@/components/page-components/headline/Headline";
 import LatestNewsLeft from "../components/page-components/latestnewsLeft/LatestNewsLeft";
 import SideContent1 from "@/components/page-components/sideContent1/SideContent1"
 import PopularNews from "@/components/page-components/popularNews/PopularNews"
-import Ads from "@/components/page-components/adv-sect/AdvBottomHead"
+import Ads from "@/components/page-components/adv-sect/AdvTopHeader"
 import AnnouncementNews from "@/components/page-components/announcementNews/AnnouncementNews"
 import CategoryNews from "@/components/page-components/categoriesNews/CategoriesNews";
 import Corner from "@/components/page-components/corner/Corner"
+
 
 const HomePage = () => {
   return (

@@ -1391,6 +1391,57 @@ const news = [
         category: ["khasanah"],
         authorId: 3,
       },
+      {
+        id: 34,
+        title: "Nikita Mirzani Bakal Diperiksa di Polda Metro Jaya Terkait Kasus Pemerasan",
+        type: "news",
+        image: "/nikita-mirzani-pemeriksaans.jpg",
+        date: "Mar 3 2025",
+        views: 7290,
+        description: "Nikita Mirzani dijadwalkan menjalani pemeriksaan sebagai tersangka atas kasus dugaan pengancaman, pemerasan, dan tindak pidana pencucian uang (TPPU) terhadap dokter Reza Gladys.",
+        slug: "nikita-mirzani-polda-metro-pemeriksaan",
+        content: `
+          <p><strong>Jakarta, 3 Maret 2025</strong> – Nikita Mirzani dijadwalkan menjalani pemeriksaan di <strong>Polda Metro Jaya</strong> pada Senin (3/3/2025) siang terkait kasus dugaan pengancaman, pemerasan, dan tindak pidana pencucian uang (TPPU).</p>
+      
+          <p class="judul-besar">Diperiksa Sebagai Tersangka</p>
+          <p>Kasus ini bermula dari laporan dokter <strong>Reza Gladys</strong>, yang mengklaim telah mengalami pemerasan dengan nominal mencapai miliaran rupiah.</p>
+      
+          <p>"Permohonan yang diajukan kepada penyidik, untuk penundaan pemeriksaan atau dijadwalkan ulang pada Senin, 3 Maret 2025, pukul 13.00 WIB," ungkap <strong>Kabid Humas Polda Metro Jaya, Kombes Pol Ade Ary</strong>.</p>
+      
+          <p>Dalam kasus ini, penyidik telah memeriksa sebanyak <strong>13 orang saksi</strong>, termasuk pelapor, terlapor, dan pihak terkait lainnya.</p>
+      
+          <p class="judul-besar">Barang Bukti dan Digital Forensik</p>
+          <p>Penyidik juga telah mengamankan beberapa bukti terkait kasus ini, antara lain:</p>
+      
+          <ul>
+            <li>9 dokumen surat</li>
+            <li>Bukti transfer uang dari korban</li>
+            <li>Bukti percakapan tangkapan layar</li>
+            <li>Bukti pembayaran cicilan</li>
+            <li>Fotokopi Pengikatan Jual Beli (PPJB)</li>
+            <li>5 flash disk berisi dokumen elektronik</li>
+            <li>8 telepon genggam yang memiliki keterkaitan dengan kasus ini</li>
+          </ul>
+      
+          <p>Hasil analisa digital forensik juga telah ditemukan dalam bentuk <strong>tiga berkas dokumen hasil ekstraksi barang bukti digital</strong>.</p>
+      
+          <p class="judul-besar">Terancam 20 Tahun Penjara</p>
+          <p>Nikita Mirzani dan asistennya, <strong>IM alias Mail Syahputra</strong>, telah resmi ditetapkan sebagai tersangka. Mereka diduga <strong>memeras dokter Reza Gladys</strong> dengan iming-iming uang tutup mulut terkait produk skincare milik pelapor.</p>
+      
+          <p>Akibat perbuatannya, Nikita Mirzani dan asistennya dijerat dengan pasal berlapis terkait pemerasan dan tindak pidana pencucian uang (TPPU).</p>
+      
+          <p>"Bukti sudah cukup kuat. Mereka terancam hukuman hingga <strong>20 tahun penjara</strong>," tegas Kombes Pol Ade Ary.</p>
+      
+          <p class="judul-besar">Dua Kali Mangkir dari Panggilan</p>
+          <p>Kasus ini pertama kali dilaporkan ke Polda Metro Jaya pada <strong>3 Desember 2024</strong>. Sejak itu, Nikita Mirzani telah dua kali mangkir dari panggilan penyidik dengan alasan pekerjaan.</p>
+      
+          <p>Saat ini, penyidik masih mendalami kemungkinan adanya pihak lain yang turut serta dalam aksi pemerasan ini.</p>
+        `,
+        tags: ["Nikita Mirzani", "Hukum", "Kriminal", "TPPU", "Pemerasan"],
+        category: ["hukum & kriminal"],
+        authorId: 1
+      }
+      
       
       
 

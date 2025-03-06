@@ -38,7 +38,7 @@ const CategoryHukrim = () => {
           <Image src={mainNews.image} alt={mainNews.title} fill className="object-cover rounded-lg" />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute bottom-4 left-4 text-white">
-            <Link href={`/artikel/${mainNews.id}/${mainNews.slug}`} passHref>
+            <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <h3 className="text-lg font-bold leading-tight hover:underline">
                 {truncateText(mainNews.title)}
               </h3>
@@ -70,7 +70,7 @@ const CategoryHukrim = () => {
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
               <div className="flex-1">
-                <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+                <Link href={`/post/${news.id}/${news.slug}`} passHref>
                   <h3 className="text-sm font-semibold leading-tight hover:underline">
                     {truncateText(news.title)}
                   </h3>

@@ -1,41 +1,40 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import newsData from "@/data/news";
 import usersData from "@/data/users";
-import PopularNews from "@/components/PopularNewsPage"; // Import Komponen
-import LatestNewsList from "@/components/LatestNewsList"; // Import List Berita Kecil
-import Ads from "../../components/page-components/adv-sect/AdvBottomHead"
+import PopularNews from "@/components/PopularNewsPage"; // Komponen Berita Terpopuler
+import LatestNewsList from "@/components/LatestNewsList"; // Komponen List Berita Terbaru
+import Ads from "@/components/page-components/adv-sect/AdvBottomHead"; // Komponen Iklan
 
-// Fungsi untuk mendapatkan author berdasarkan ID
+// ✅ Fungsi mendapatkan author berdasarkan ID
 const getAuthorById = (authorId) =>
   usersData.find((user) => user.id === authorId) || {};
 
-// Filter berita kategori "Hukum & Kriminal"
-const hukrimNews = newsData
-  .filter((news) => news.category.includes("hukum & kriminal"))
+// ✅ Filter berita kategori "Khasanah"
+const khasanahNews = newsData
+  .filter((news) => news.category.includes("khasanah"))
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-// Ambil berita utama dan berita lainnya
-const mainNews = hukrimNews[0]; // Berita utama
-const additionalNews = hukrimNews.slice(1, 5); // 4 berita tambahan vertikal
-const latestNews = hukrimNews.slice(1, 10); // 10 berita terkini
+const mainNews = khasanahNews[0]; // Berita utama
+const additionalNews = khasanahNews.slice(1, 5); // 4 berita tambahan vertikal
+const latestNews = khasanahNews.slice(1, 10); // 10 berita terkini
+const popularNews = khasanahNews
+  .sort((a, b) => b.views - a.views)
+  .slice(0, 4); // 4 berita paling banyak dibaca
 
-// Filter berita terpopuler berdasarkan views
-const popularNews = hukrimNews
-  .sort((a, b) => b.views - a.views) // Urutkan berdasarkan views tertinggi
-  .slice(0, 4); // Ambil 4 berita terpopuler
-
-const HukrimPage = () => {
+const KhasanahPage = () => {
   return (
     <div className="w-full 2xl:flex xl:flex lg:flex flex-row 2xl:max-w-[1200px] xl:max-w-[1200px] lg:max-w-[1020px] mx-auto py-6">
       {/* **KIRI: Berita Utama + 4 Berita Vertikal + List Berita Kecil** */}
-      <div className="2xl:w-[75%] xl:w-[75%] lg:w-[75%] w-full flex flex-col gap-2 2xl:pr-4 xl:pr-4 lg:pr-4 2xl:px-0 xl:px-0 lg:px-0 px-2">
+      <div className="2xl:w-[75%] xl:w-[75%] lg:w-[75%] w-full flex flex-col gap-2 px-2">
         {/* **Bagian Atas: Berita Utama + 4 Berita Vertikal** */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* **Berita Utama (Lebar 2 Kolom)** */}
           {mainNews && (
-            <div className="md:col-span-2 relative w-full 2xl:h-[400px] xl:h-[400px] lg:h-[400px] h-[300px] rounded-lg overflow-hidden">
+            <div className="md:col-span-2 relative w-full h-[400px] rounded-lg overflow-hidden">
               <Image
                 src={mainNews.image}
                 alt={mainNews.title}
@@ -87,7 +86,9 @@ const HukrimPage = () => {
           </div>
         </div>
 
-            <Ads/>
+        {/* **Iklan** */}
+        <Ads />
+
         {/* **List Berita Kecil (Menggunakan Komponen)** */}
         <LatestNewsList newsList={latestNews} />
       </div>
@@ -98,4 +99,4 @@ const HukrimPage = () => {
   );
 };
 
-export default HukrimPage;
+export default KhasanahPage;

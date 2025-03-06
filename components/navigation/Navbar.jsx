@@ -80,7 +80,7 @@ const Navbar = () => {
                 {searchResults.map((news) => (
                   <Link
                     key={news.id}
-                    href={`/artikel/${news.id}/${news.slug}`}
+                    href={`/post/${news.id}/${news.slug}`}
                     className="block px-4 py-2 hover:bg-gray-100 text-sm text-black"
                   >
                     {news.title}
@@ -114,7 +114,7 @@ const Navbar = () => {
 
             <div className="relative w-10 h-10">
               <Image
-                src="/Final Logo LBJ.png"
+                src="/LBJ white.png"
                 alt="XYZONE Logo Mobile"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -138,7 +138,7 @@ const Navbar = () => {
                 {searchResults.map((news) => (
                   <Link
                     key={news.id}
-                    href={`/artikel/${news.id}/${news.slug}`}
+                    href={`/post/${news.id}/${news.slug}`}
                     className="block px-4 py-2 hover:bg-gray-100 text-sm text-black"
                   >
                     {news.title}
@@ -190,10 +190,10 @@ const Navbar = () => {
               Beranda
             </a>
             {[
-              { name: "Hukum & Kriminal", path: "/hukrim" },
-              { name: "Politik", path: "/politik" },
-              { name: "Lalu Lintas", path: "/lalu-lintas" },
-              { name: "Khasanah", path: "/khasanah" },
+              { name: "Hukum & Kriminal", path: "/hukrim", category: "hukum & kriminal" },
+              { name: "Politik", path: "/politik", category: "politik" },
+              { name: "Lalu Lintas", path: "/lalu-lintas", category: "lalu lintas" },
+              { name: "Khasanah", path: "/khasanah", category: "khasanah" },
             ].map((menu) => (
               <div
                 key={menu.name}

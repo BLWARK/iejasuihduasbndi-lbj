@@ -25,7 +25,7 @@ const LatestNewsList = ({ newsList }) => {
               <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
             </div>
             <div className="flex-1 2xl:mt-0 xl:mt-0 lg:mt-0 mt-4">
-              <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
                 <h3 className="text-lg font-semibold leading-tight hover:underline text-gray-900">
                   {news.title}
                 </h3>

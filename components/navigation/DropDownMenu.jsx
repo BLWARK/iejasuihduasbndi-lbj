@@ -1,34 +1,23 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import News from "../../data/news";
-import users from "@/data/users"; // Data author
+import newsData from "@/data/news";
 
-// 🔹 Map kategori ke dataset berita
-const categoryArticles = {
-  "hukum & kriminal": News,
-  politik: News,
-  "lalu lintas": News,
-  khasanah: News,
+// Fungsi untuk mendapatkan berita berdasarkan kategori
+const getNewsByCategory = (category) => {
+  return newsData
+    .filter((news) => news.category.includes(category))
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
 };
-
-// 🔹 Fungsi mendapatkan author berdasarkan ID
-const getAuthorById = (authorId) =>
-  users.find((user) => user.id === authorId) || {};
 
 const DropdownMenu = ({ category, isVisible, onMouseEnter, onMouseLeave }) => {
   const [articles, setArticles] = useState([]);
   const [animationClass, setAnimationClass] = useState(""); // 🔥 Animasi class
 
   useEffect(() => {
-    const selectedArticles = categoryArticles[category] || [];
-    const sortedArticles = selectedArticles
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-      .slice(0, 4); // Ambil 4 berita terbaru
-
-    setArticles(sortedArticles);
+    setArticles(getNewsByCategory(category));
   }, [category]);
 
   useEffect(() => {
@@ -41,39 +30,25 @@ const DropdownMenu = ({ category, isVisible, onMouseEnter, onMouseLeave }) => {
 
   return (
     <div
-      className={`hidden absolute top-[310px]  transform -translate-x-1/2 bg-white shadow-lg rounded-lg 2xl:w-[1200px] xl:w-[1200px] lg:w-[1000px]  p-10 z-50 2xl:flex xl:flex lg:flex justify-center space-x-6 border border-gray-200 ${animationClass}`}
+      className={`absolute top-[520px] bg-white shadow-lg rounded-lg w-full 2xl:w-[1200px] xl:w-[1200px] lg:w-[1000px] p-6 z-50 transition-opacity 2xl:block xl:block lg:block hidden ${animationClass}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-        
-      {articles.map((article) => {
-        const author = getAuthorById(article.authorId);
-        return (
-            
-          <div key={article.id} className="flex flex-col items-start w-64">
-            
-            <div className="relative w-full h-[100px]">
-              <Image
-                src={article.image}
-                alt={article.title}
-                fill
-                className="rounded-lg object-cover"
-              />
+      <div className="grid grid-cols-4 gap-4">
+        {articles.map((news) => (
+          <div key={news.id} className="flex flex-col gap-2">
+            <div className="relative w-full h-[150px]">
+              <Image src={news.image} alt={news.title} fill className="rounded-lg object-cover" />
             </div>
-            <div className="mt-2">
-              <Link href={`/artikel/${article.id}/${article.slug}`}>
-                <h4 className="text-sm font-semibold hover:underline cursor-pointer">
-                  {article.title}
-                </h4>
-              </Link>
-              <p className="text-xs text-gray-500">
-                {author?.name || "Unknown"} •{" "}
-                {new Date(article.date).toLocaleDateString()}
-              </p>
-            </div>
+            <Link href={`/post/${news.id}/${news.slug}`}>
+              <h4 className="text-sm font-semibold hover:underline cursor-pointer text-gray-800">
+                {news.title}
+              </h4>
+            </Link>
+            <p className="text-xs text-gray-500">{new Date(news.date).toLocaleDateString()}</p>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };

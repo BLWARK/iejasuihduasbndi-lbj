@@ -38,7 +38,7 @@ const CategoryPolitik = () => {
           <Image src={mainNews.image} alt={mainNews.title} fill className="object-cover rounded-lg" />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute bottom-4 left-4 text-white">
-            <Link href={`/artikel/${mainNews.id}/${mainNews.slug}`} passHref>
+            <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <h3 className="text-lg font-bold leading-tight hover:underline">
                 {truncateText(mainNews.title)}
               </h3>
@@ -70,7 +70,7 @@ const CategoryPolitik = () => {
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
               <div className="flex-1">
-                <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+                <Link href={`/post/${news.id}/${news.slug}`} passHref>
                   <h3 className="text-sm font-semibold leading-tight hover:underline">
                     {truncateText(news.title)}
                   </h3>
@@ -83,7 +83,7 @@ const CategoryPolitik = () => {
           <p className="text-gray-500 text-sm">Belum ada berita di kategori ini.</p>
         )}
          <div>
-          <Link href="/hukrim" passHref>
+          <Link href="/politik" passHref>
             <button className="py-2 px-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-400 transition text-nowrap">
               Lihat Semua
             </button>
