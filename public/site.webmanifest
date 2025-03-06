@@ -1,0 +1,22 @@
+{
+  "name": "Lensa Berita Jakarta",
+  "short_name": "LensaBerita",
+  "description": "Lensa Berita Jakarta adalah portal berita terpercaya yang menyajikan informasi terkini Indonesia dan internasional.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff4500",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "/LBJLOGOAPP.jpg"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "/LBJLOGOAPP.jpg"
+    }
+  ]
+}

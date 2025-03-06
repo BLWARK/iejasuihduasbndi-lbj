@@ -28,7 +28,7 @@ const LatestNewsLeft = () => {
           <div className="w-[20%] h-[5px] my-4 bg-red-600"></div>
         </div>
         <div>
-          <Link href="/latest-news" passHref>
+          <Link href="/berita-terbaru" passHref>
             <button className="py-2 px-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-400 transition text-nowrap">
               View All
             </button>

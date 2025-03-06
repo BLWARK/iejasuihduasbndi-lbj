@@ -1097,7 +1097,7 @@ const news = [
         authorId: 3,
       },
       {
-        id: 26,
+        id: 35,
         title: "Catat! Transjakarta 5D Jurusan Cililitan-Ancol Berhenti Operasi 28 Februari",
         type: "news",
         image: "/transjakarta-5d-berhenti.jpg",
