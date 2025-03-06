@@ -11,12 +11,12 @@
     {
       "src": "/LBJLOGOAPP.jpg",
       "sizes": "192x192",
-      "type": "/LBJLOGOAPP.jpg"
+      "type": "/image/png/jpg"
     },
     {
       "src": "/LBJLOGOAPP.jpg",
       "sizes": "512x512",
-      "type": "/LBJLOGOAPP.jpg"
+      "type": "/image/png/jpg"
     }
   ]
 }
