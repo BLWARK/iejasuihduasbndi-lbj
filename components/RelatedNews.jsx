@@ -20,7 +20,7 @@ const RelatedNews = ({ relatedArticles }) => {
               </div>
 
               {/* ✅ Judul Artikel */}
-              <Link href={`/artikel/${news.id}/${news.slug}`} passHref>
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
                 <h3 className="text-sm font-semibold leading-tight hover:underline mt-3 text-gray-900">
                   {news.title}
                 </h3>
