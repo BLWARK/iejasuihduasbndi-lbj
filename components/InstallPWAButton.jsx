@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 
 const InstallPWAButton = () => {
@@ -7,8 +6,24 @@ const InstallPWAButton = () => {
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
+    const checkInstalledApps = async () => {
+      if (navigator.getInstalledRelatedApps) {
+        const relatedApps = await navigator.getInstalledRelatedApps();
+        if (relatedApps.length > 0) {
+          console.log("PWA sudah diinstall.");
+          setIsInstalled(true);
+        } else {
+          console.log("PWA belum diinstall.");
+          setIsInstalled(false);
+        }
+      }
+    };
+
+    checkInstalledApps();
+
     const handler = (e) => {
       e.preventDefault();
+      console.log("beforeinstallprompt event detected!");
       setDeferredPrompt(e);
     };
 
@@ -21,11 +36,10 @@ const InstallPWAButton = () => {
 
   const handleInstall = async () => {
     if (!deferredPrompt) return;
-
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
+    console.log("User choice:", outcome);
     if (outcome === "accepted") {
-      console.log("User accepted the install prompt");
       setIsInstalled(true);
     }
     setDeferredPrompt(null);
@@ -36,7 +50,7 @@ const InstallPWAButton = () => {
       {!isInstalled && deferredPrompt && (
         <button
           onClick={handleInstall}
-          className="px-4 py-2 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition"
+          className="px-4 py-2 bg-orange-600 text-white rounded-lg shadow-lg hover:bg-orange-700 transition"
         >
           Install Aplikasi
         </button>
