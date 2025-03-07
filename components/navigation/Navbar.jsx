@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import newsData from "@/data/news";
 import DropdownMenu from "@/components/navigation/DropDownMenu";
+import PwaButton from "@/components/InstallPWAButton";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -151,31 +152,23 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <nav className="md:hidden bg-gray-100 p-4 space-y-4">
-            <a href="#" className="block hover:underline">
-              Home
+          <nav className="md:hidden bg-gray-100 p-4 space-y-4 text-gray-700">
+            <a href="/" className="block hover:underline">
+              Beranda
             </a>
-            <a href="#" className="block hover:underline">
-              New Look
+            <a href="/hukrim" className="block hover:underline">
+              Hukum & Kriminal
             </a>
-            <a href="#" className="block hover:underline">
-              Fashion
+            <a href="/politik" className="block hover:underline">
+              Politik
             </a>
-            <a href="#" className="block hover:underline">
-              Lifestyle
+            <a href="/lalu-lintas" className="block hover:underline">
+              Lalu Lintas
             </a>
-            <a href="#" className="block hover:underline">
-              Business
+            <a href="/" className="block hover:underline">
+              Khasanah
             </a>
-            <a href="#" className="block hover:underline">
-              Art
-            </a>
-            <a href="#" className="block hover:underline">
-              Technology
-            </a>
-            <a href="#" className="block hover:underline">
-              Pages
-            </a>
+            <PwaButton/>
           </nav>
         )}
 

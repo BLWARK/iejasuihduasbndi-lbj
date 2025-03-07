@@ -4,7 +4,6 @@ import TopNavbar from "@/components/navigation/TopNavbar";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/footer/Footer";
 import Ecosystem from "@/components/navigation/Ecosystem";
-
 import "./globals.css";
 
 // Menggunakan font Open Sans dengan semua varian
