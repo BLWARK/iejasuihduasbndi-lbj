@@ -261,9 +261,11 @@ const Navbar = () => {
             <div
               className="relative group"
               onMouseEnter={() => setHoveredCategory("regional")}
+              onMouseLeave={handleMouseLeave}
             >
-              <span className="text-black whitespace-nowrap hover:underline px-4 border-r border-r-gray-300 pr-10 cursor-pointer">
-                Regional
+              <span className="flex items-center gap-1 text-black whitespace-nowrap hover:underline px-4 border-r border-r-gray-300 pr-10 cursor-pointer">
+                Regional{" "}
+                <FiChevronDown className="text-sm mt-[1px] group-hover:rotate-180 transition-transform duration-200" />
               </span>
             </div>
 
