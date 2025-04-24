@@ -23,9 +23,11 @@ const SideContent1 = () => {
       {editorNews.map((news, index) => (
         <div key={news.id} className="flex flex-col">
           {/* Gambar */}
+          <Link href={`/post/${news.id}/${news.slug}`} passHref>
           <div className="relative w-full 2xl:h-[150px] xl:h-[150px] lg:h-[150px] h-[200px] rounded-lg overflow-hidden">
             <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
           </div>
+          </Link>
 
           {/* Judul */}
           <Link href={`/post/${news.id}/${news.slug}`} passHref>

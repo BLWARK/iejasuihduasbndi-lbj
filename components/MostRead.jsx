@@ -22,9 +22,11 @@ const MostRead = ({ mostReadArticles }) => {
           mostReadArticles.map((news, index) => (
             <div key={news.id} className="flex flex-col gap-4 border-b  pb-4 border-gray-300">
               {/* ✅ Gambar Artikel */}
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
               <div className="relative w-full 2xl:h-[170px] xl:h-[170px] lg:h-[170px] h-[200px] rounded-lg overflow-hidden">
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
+              </Link>
 
               {/* ✅ Judul Artikel */}
               <div className="flex-1">

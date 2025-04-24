@@ -4,6 +4,8 @@ import TopNavbar from "@/components/navigation/TopNavbar";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/footer/Footer";
 import Ecosystem from "@/components/navigation/Ecosystem";
+import Tracking from "@/components/Tracking"
+import Scrolltop from "@/components/scroll-to-top/Scroll"
 import "./globals.css";
 
 // Menggunakan font Open Sans dengan semua varian
@@ -111,12 +113,14 @@ export default function RootLayout({
         />
       </head>
       <body className={openSans.className}>
+        <Tracking/>
         <div className="flex flex-col justify-center items-center overflow-hidden bg-gray-100 w-full">
           <TopNavbar />
           <Ecosystem />
           <Navbar />
           <main className="w-full 2xl:px-0">{children}</main>
           <Footer />
+          <Scrolltop/>
         </div>
       </body>
     </html>

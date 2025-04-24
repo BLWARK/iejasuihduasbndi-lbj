@@ -6,6 +6,7 @@ import PopularNews from "@/components/page-components/popularNews/PopularNews"
 import Ads from "@/components/page-components/adv-sect/AdvTopHeader"
 import AnnouncementNews from "@/components/page-components/announcementNews/AnnouncementNews"
 import CategoryNews from "@/components/page-components/categoriesNews/CategoriesNews";
+import Lbjtv from "@/components/page-components/lbjtv/Lbjtv"
 import Corner from "@/components/page-components/corner/Corner"
 
 
@@ -45,7 +46,9 @@ const HomePage = () => {
           <SideContent1 />
         </div>
       </section>
+      <section className="2xl:px-0 px-3"><Lbjtv/></section>
       <section className="2xl:px-0 px-3"><CategoryNews/></section>
+      
       <section className="px-0"><Corner/></section>
     </div>
   );

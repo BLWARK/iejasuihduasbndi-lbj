@@ -21,9 +21,11 @@ const LatestNewsList = ({ newsList }) => {
       <div className="grid grid-cols-1 gap-4">
         {newsList.slice(0, visibleCount).map((news) => (
           <div key={news.id} className="2xl:flex xl:flex lg:flex  flex-row gap-4 items-start border-b border-gray-300 pb-4">
+            <Link href={`/post/${news.id}/${news.slug}`} passHref>
             <div className="relative 2xl:w-[250px] xl:w-[250px] lg:w-[250px] w-full 2xl:h-[150px] xl:h-[150px] lg:h-[150px] h-[200px]  rounded-lg overflow-hidden">
               <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
             </div>
+            </Link>
             <div className="flex-1 2xl:mt-0 xl:mt-0 lg:mt-0 mt-4">
               <Link href={`/post/${news.id}/${news.slug}`} passHref>
                 <h3 className="text-lg font-semibold leading-tight hover:underline text-gray-900">

@@ -20,9 +20,11 @@ const PopularNewsPage = ({ newsList }) => {
       <div className="w-[60px] h-[5px] bg-red-600 rounded-full mb-5 mt-2"></div>
       {newsList.map((news, index) => (
         <div key={news.id} className="flex flex-col">
+          <Link href={`/post/${news.id}/${news.slug}`} passHref>
           <div className="relative w-full 2xl:h-[150px] xl:h-[150px] lg:h-[150px] h-[200px] rounded-lg overflow-hidden">
             <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
           </div>
+          </Link>
           <Link href={`/post/${news.id}/${news.slug}`} passHref>
             <h3 className="text-sm font-semibold leading-tight hover:underline mt-3 text-gray-900">
               {news.title}

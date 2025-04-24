@@ -13,6 +13,7 @@ import Follow from "@/components/follow/Follow";
 import { FaPlay, FaPause } from "react-icons/fa";
 import Adv from "@/components/page-components/adv-sect/AdvTopHeader"
 import { notFound } from "next/navigation"; // Untuk handling 404
+import Tracking from "@/components/Tracking";
 
 // ✅ Fungsi untuk mendapatkan author berdasarkan ID
 const getAuthorById = (authorId) => {
@@ -27,6 +28,7 @@ const PostPage = () => {
   const [mostReadArticles, setMostReadArticles] = useState([]);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const speechRef = useRef(null);
+  
 
   useEffect(() => {
     if (!params?.id || !params?.slug) return;
@@ -103,12 +105,28 @@ const PostPage = () => {
     };
   }, [router.asPath]); // Dipanggil setiap kali URL berubah
 
+  useEffect(() => {
+    // ✅ Jalankan script Twitter hanya jika ada embed dalam konten
+    if (article?.content.includes("twitter-tweet")) {
+      if (window.twttr) {
+        window.twttr.widgets.load();
+      } else {
+        const script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        script.charset = "utf-8";
+        document.body.appendChild(script);
+      }
+    }
+  }, [article])
+
   if (!article) {
     return <h1 className="text-center text-red-600">Article not found...</h1>;
   }
 
   return (
     <div className="w-full 2xl:flex-col xl:flex-col lg:flex-col flex-row 2xl:max-w-[1200px] xl:max-w-[1200px] lg:max-w-[1000px] mx-auto py-6 2xl:px-0 xl:px-0 lg:px-0 px-3">
+      <Tracking/>
       {/* Iklan Atas */}
       
       <div className="flex flex-col 2xl:flex-row xl:flex-row lg:flex-row gap-10">
@@ -176,6 +194,7 @@ const PostPage = () => {
             className="mt-4 text-md leading-relaxed text-gray-800"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
+          
 
           {/* ✅ SECTION TAGS */}
           {article.tags && article.tags.length > 0 && (

@@ -13,6 +13,7 @@ const news = [
           <p><strong>Podcast perdana Data1n</strong> menghadirkan diskusi menarik mengenai temuan <strong>Global Strategy Research Institute (GSRI)</strong> terkait <strong>prioritas anggaran pemerintahan Prabowo</strong>.</p>
           <p>Dalam sesi ini, <strong>Sebastian Salang</strong> sebagai pemateri mengulas kebijakan anggaran berdasarkan struktur belanja negara, dengan <strong>Sabrina Restiawan</strong> sebagai host.</p>
           <br>
+          <blockquote class="twitter-tweet"><p lang="in" dir="ltr">📊 APBN 2025 dalam Angka<br><br>💰 Total Anggaran: Rp 3.621,3T<br>🔹 Pemerintah Pusat: Rp 2.490T<br>🔹 TKD: Rp 919,9T<br><br>Efisiensi atau risiko bagi ekonomi nasional?<br><br>📷 Sumber: Kompas<a href="https://twitter.com/hashtag/APBN2025?src=hash&amp;ref_src=twsrc%5Etfw">#APBN2025</a> <a href="https://twitter.com/hashtag/EfisiensiAnggaran?src=hash&amp;ref_src=twsrc%5Etfw">#EfisiensiAnggaran</a> <a href="https://twitter.com/hashtag/EkonomiIndonesia?src=hash&amp;ref_src=twsrc%5Etfw">#EkonomiIndonesia</a> <a href="https://t.co/A2K5WQSa0l">pic.twitter.com/A2K5WQSa0l</a></p>&mdash; Data in (@Data1n) <a href="https://twitter.com/Data1n/status/1889696457361432654?ref_src=twsrc%5Etfw">February 12, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <p class="judul-besar">Prioritas Anggaran dan Tantangan Implementasi</p>
           <p>Salah satu temuan utama <strong>GSRI</strong> adalah bahwa pemerintahan <strong>Prabowo</strong> menempatkan <strong>pertahanan dan keamanan</strong> sebagai <strong>prioritas ketiga</strong> dalam belanja negara dengan alokasi sebesar <strong>Rp376,4 triliun</strong>.</p>
           <p>Ini mencerminkan visi pemerintahan baru yang tetap menempatkan <strong>stabilitas nasional</strong> sebagai aspek fundamental.</p>
@@ -1402,7 +1403,7 @@ const news = [
         slug: "nikita-mirzani-polda-metro-pemeriksaan",
         content: `
           <p><strong>Jakarta, 3 Maret 2025</strong> – Nikita Mirzani dijadwalkan menjalani pemeriksaan di <strong>Polda Metro Jaya</strong> pada Senin (3/3/2025) siang terkait kasus dugaan pengancaman, pemerasan, dan tindak pidana pencucian uang (TPPU).</p>
-      
+          <blockquote class="twitter-tweet"><p lang="in" dir="ltr">DETIK-DETIK TAHANAN KABUR‼️<br><br>Jadi ini penyebab tahanan kabur dari lapas‼️<br><br>ngeri banget.. 🤯 <a href="https://t.co/lV083z4JQj">pic.twitter.com/lV083z4JQj</a></p>&mdash; Thread Skandal (@ThreadSkandal) <a href="https://twitter.com/ThreadSkandal/status/1899412459187994938?ref_src=twsrc%5Etfw">March 11, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <p class="judul-besar">Diperiksa Sebagai Tersangka</p>
           <p>Kasus ini bermula dari laporan dokter <strong>Reza Gladys</strong>, yang mengklaim telah mengalami pemerasan dengan nominal mencapai miliaran rupiah.</p>
       

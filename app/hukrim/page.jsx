@@ -42,7 +42,9 @@ const HukrimPage = () => {
                 fill
                 className="object-cover rounded-lg"
               />
+              <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <div className="absolute inset-0 bg-black/50"></div>
+              </Link>
               <div className="absolute bottom-6 left-6 text-white max-w-[90%]">
                 <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
                   <h2 className="text-xl md:text-3xl font-bold leading-tight hover:underline">

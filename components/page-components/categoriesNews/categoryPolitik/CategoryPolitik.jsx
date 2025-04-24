@@ -36,7 +36,9 @@ const CategoryPolitik = () => {
       {mainNews && (
         <div className="relative w-full h-[250px] rounded-lg overflow-hidden mb-4">
           <Image src={mainNews.image} alt={mainNews.title} fill className="object-cover rounded-lg" />
+          <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
           <div className="absolute inset-0 bg-black/50"></div>
+          </Link>
           <div className="absolute bottom-4 left-4 text-white">
             <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <h3 className="text-lg font-bold leading-tight hover:underline">
@@ -66,9 +68,11 @@ const CategoryPolitik = () => {
         {smallNews.length > 0 ? (
           smallNews.map((news) => (
             <div key={news.id} className="flex gap-4 items-start">
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
               <div className="relative w-[100px] h-[70px] rounded-lg overflow-hidden">
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
+              </Link>
               <div className="flex-1">
                 <Link href={`/post/${news.id}/${news.slug}`} passHref>
                   <h3 className="text-sm font-semibold leading-tight hover:underline">

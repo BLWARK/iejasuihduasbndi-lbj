@@ -40,9 +40,11 @@ const LatestNewsLeft = () => {
       <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-4 mt-5">
         {/* Berita Utama */}
         <div className="gap-2 flex flex-col 2xl:border-b-0 border-b border-b-gray-300 pb-5">
+        <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
           <div className="relative w-full h-[350px] rounded-lg overflow-hidden">
             <Image src={mainNews.image} alt={mainNews.title} fill className="w-full h-full object-cover rounded-lg" />
           </div>
+          </Link>
           <div className="text-black">
             <Link href={`/post/${mainNews.id}/${mainNews.slug}`} passHref>
               <h2 className="text-xl font-bold leading-tight hover:underline cursor-pointer">
@@ -65,9 +67,11 @@ const LatestNewsLeft = () => {
         <div className="flex flex-col justify-start items-start gap-6">
           {sideNews.map((news) => (
             <div key={news.id} className="flex items-start gap-4 border-b border-gray-300 pb-4">
+              <Link href={`/post/${news.id}/${news.slug}`} passHref>
               <div className="relative w-[150px] h-[100px] rounded-lg overflow-hidden">
                 <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
               </div>
+              </Link>
               <div className="flex-1">
                 <Link href={`/post/${news.id}/${news.slug}`} passHref>
                   <h3 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">

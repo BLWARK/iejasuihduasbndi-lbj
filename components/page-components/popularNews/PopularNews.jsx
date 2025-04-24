@@ -27,9 +27,11 @@ const PopularNews = () => {
       <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-6">
         {popularNews.map((news) => (
           <div key={news.id} className="flex items-start gap-4 border-b border-gray-300 pb-4">
+            <Link href={`/post/${news.id}/${news.slug}`} passHref>
             <div className="relative w-[170px] h-[100px] rounded-lg overflow-hidden">
               <Image src={news.image} alt={news.title} fill className="object-cover rounded-lg" />
             </div>
+            </Link>
             <div className="flex-1">
               <Link href={`/post/${news.id}/${news.slug}`} passHref>
                 <h1 className="text-sm font-semibold leading-tight hover:underline cursor-pointer">

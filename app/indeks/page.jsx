@@ -62,13 +62,13 @@ const LatestNewsPage = () => {
     <div className="w-full 2xl:max-w-[1200px] xl:max-w-[1200px] lg:max-w-[1020px] mx-auto py-6 flex flex-col lg:flex-row gap-6">
       {/* ✅ Bagian Kiri: Berita Terbaru */}
       <div className="lg:w-[75%] w-full flex flex-col gap-2 px-2">
-        <h1 className="text-3xl font-bold text-red-600 mb-6">Berita Terbaru</h1>
+        <h1 className="text-3xl font-bold text-red-600 ">Semua Berita</h1>
         <div className="w-[10%] h-[6px] rounded-full bg-red-600 mt-4 mb-6"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {currentNews.map((news) => (
             <div key={news.id} className="relative w-full rounded-lg overflow-hidden border border-gray-300">
-              <Link href={`/post/${news.id}/${news.slug}`} passHref>
+                <Link href={`/post/${news.id}/${news.slug}`} passHref>
               <div className="relative w-full h-[200px]">
                 <Image
                   src={news.image}
@@ -76,8 +76,7 @@ const LatestNewsPage = () => {
                   fill
                   className="object-cover rounded-t-lg"
                 />
-              </div>
-              </Link>
+              </div></Link>
 
               <div className="p-4">
                 <Link href={`/post/${news.id}/${news.slug}`} passHref>
@@ -104,7 +103,7 @@ const LatestNewsPage = () => {
                 currentPage === 1 ? "cursor-not-allowed opacity-50" : ""
               }`}
             >
-               Prev
+              <FaArrowLeft size={16} /> Prev
             </button>
 
             {/* 🔥 Tombol Halaman (Maksimal 5) */}
@@ -144,11 +143,11 @@ const LatestNewsPage = () => {
             <button
               onClick={() => handlePagination(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className={`flex items-center gap-2 px-3 py-2 text-sm font-semibold rounded-md transition bg-gray-300 text-gray-800 hover:bg-gray-400 ${
+              className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-md transition bg-gray-300 text-gray-800 hover:bg-gray-400 ${
                 currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""
               }`}
             >
-              Next 
+              Next <FaArrowRight size={16} />
             </button>
           </div>
         )}
